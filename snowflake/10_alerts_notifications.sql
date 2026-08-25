@@ -8,7 +8,7 @@ USE SCHEMA APP;
 CREATE OR REPLACE NOTIFICATION INTEGRATION aws_thailand_food_cold_chain_EMAIL_INT
   TYPE = EMAIL
   ENABLED = TRUE
-  ALLOWED_RECIPIENTS = ('jonathan.asvestis@snowflake.com');
+  ALLOWED_RECIPIENTS = ('<YOUR_EMAIL>');
 
 -- Alert: TEMP_EXCURSION_ALERT
 CREATE OR REPLACE ALERT APP.TEMP_EXCURSION_ALERT
@@ -22,7 +22,7 @@ IF (EXISTS (
 THEN
   CALL SYSTEM$SEND_EMAIL(
     'aws_thailand_food_cold_chain_EMAIL_INT',
-    'jonathan.asvestis@snowflake.com',
+    '<YOUR_EMAIL>',
     '[ALERT] Cold Chain Monitoring: Temperature excursion detected — product at risk',
     'Temperature excursion detected — product at risk'
   );
@@ -41,7 +41,7 @@ IF (EXISTS (
 THEN
   CALL SYSTEM$SEND_EMAIL(
     'aws_thailand_food_cold_chain_EMAIL_INT',
-    'jonathan.asvestis@snowflake.com',
+    '<YOUR_EMAIL>',
     '[ALERT] Cold Chain Monitoring: Compressor failure predicted — schedule maintenance',
     'Compressor failure predicted — schedule maintenance'
   );
