@@ -124,7 +124,7 @@ Industry research and Snowflake customer outcomes:
 - **Cold chain failures cause 30-40% of food loss in Southeast Asian supply chains** — [FAO](https://www.fao.org/food-loss-and-food-waste/en/)
 - **Predictive cold chain monitoring reduces product loss by 25-40% through early intervention** — [McKinsey Supply Chain](https://www.mckinsey.com/capabilities/operations/our-insights)
 - **CP Foods operates 1,000+ refrigerated trucks delivering to 130,000 points across Thailand** — [CP Foods](https://www.cpfworldwide.com/en)
-- **Kraft Heinz** (Snowflake customer): built a unified data platform on Snowflake powering supply chain and demand forecasting across 200+ brands -- [snowflake.com/customers/kraft-heinz](https://www.snowflake.com/en/customers/all-customers/case-study/kraft-heinz/)
+- **Foodics** (Snowflake customer): built a unified data platform on Snowflake powering supply chain and demand forecasting across 200+ brands -- [snowflake.com/customers/foodics](https://www.snowflake.com/en/customers/all-customers/case-study/foodics/)
 
 ## Key Demo Numbers
 
