@@ -1,16 +1,13 @@
--- ============================================================================
--- Cold Chain Monitoring
--- Real-time cold chain monitoring across 800 trucks and 35 cold storage facilities — IoT Core tracks temperature excursions, ML.ANOMALY_DETECTION predicts equipment failure, and SNS alerts operations before product loss.
--- ============================================================================
-USE ROLE ACCOUNTADMIN;
-CREATE DATABASE IF NOT EXISTS COLD_CHAIN;
-CREATE WAREHOUSE IF NOT EXISTS COLDCHAIN_WH WAREHOUSE_SIZE = 'MEDIUM' AUTO_SUSPEND = 120 AUTO_RESUME = TRUE;
-USE DATABASE COLD_CHAIN;
-CREATE SCHEMA IF NOT EXISTS RAW;
-CREATE SCHEMA IF NOT EXISTS CURATED;
-CREATE SCHEMA IF NOT EXISTS ML;
-CREATE SCHEMA IF NOT EXISTS AI;
-CREATE SCHEMA IF NOT EXISTS SEARCH;
-CREATE SCHEMA IF NOT EXISTS APP;
+-- Generated from generator/demo_specs/aws-thailand-food-cold-chain.json
+-- Regenerate with: python3 generator/gen_repo_docs.py aws-thailand-food-cold-chain
+-- This is the schema that is actually deployed for THAILAND_FOOD_COLD_CHAIN.
 
-USE WAREHOUSE COLDCHAIN_WH;
+-- THAILAND_FOOD_COLD_CHAIN  (Cold Chain Monitoring)
+-- generated from generator/demo_specs/aws-thailand-food-cold-chain.json - do not hand-edit
+CREATE DATABASE IF NOT EXISTS THAILAND_FOOD_COLD_CHAIN;
+CREATE SCHEMA IF NOT EXISTS THAILAND_FOOD_COLD_CHAIN.RAW;
+CREATE SCHEMA IF NOT EXISTS THAILAND_FOOD_COLD_CHAIN.CURATED;
+CREATE SCHEMA IF NOT EXISTS THAILAND_FOOD_COLD_CHAIN.APP;
+USE DATABASE THAILAND_FOOD_COLD_CHAIN;
+
+-- 5 real regions; entity names carry their region so the two always agree
