@@ -54,6 +54,7 @@ export default function HomePage() {
         <div className="lg:col-span-1">
           <GeoMap
             country="thailand"
+            labels={{ entity: 'Routes', event: 'Temperature Readings', alert: 'Excursions' }}
             regions={data?.regions}
             markers={[{"label": "Bangkok", "value": "Hub: 847 trucks", "color": "green", "size": "lg"}, {"label": "Chiang Mai", "value": "Depot: -18.1\u00b0C avg", "color": "green", "size": "md"}, {"label": "Laem Chabang", "value": "Port: 124 containers", "color": "green", "size": "md"}, {"label": "Surat Thani", "value": "Truck-247: ALERT", "color": "red", "size": "md"}, {"label": "Khon Kaen", "value": "Depot: -17.8\u00b0C", "color": "amber", "size": "sm"}, {"label": "Rayong", "value": "Cold store: OK", "color": "green", "size": "sm"}]}
             routes={[{"from": "Bangkok", "to": "Chiang Mai", "color": "#EF4444"}, {"from": "Bangkok", "to": "Laem Chabang", "color": "#10B981"}, {"from": "Bangkok", "to": "Surat Thani", "color": "#F59E0B"}]}
@@ -84,8 +85,13 @@ export default function HomePage() {
         columns={[
           { key: 'id', header: 'Truck ID' },
           { key: 'name', header: 'Route' },
+          { key: 'region', header: 'Region' },
           { key: 'status', header: 'Temp Status' },
-          { key: 'value', header: 'Current °C' },
+          { key: 'm1', header: 'Current °C' },
+          { key: 'm2', header: 'Transit Temp' },
+          { key: 'm3', header: 'On Time Delivery' },
+          { key: 'events', header: 'Temperature Readings' },
+          { key: 'alerts', header: 'Excursions' },
         ]}
         data={data?.entities || []}
         title="Fleet Temperature Status"
